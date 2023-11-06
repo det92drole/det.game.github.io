@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+            body{
+                margin:0;
+                overflow:hidden;
+            }
+            canvas{
+                background-color:black;
+            } 
+            #overlappingDiv{
+                color: red; 
+                background-color: black; 
+                position:absolute; 
+                top:0; right:0; 
+                bottom:0; left:0; 
+                opacity:0; 
+                pointer-events:none;
+            }
+            #healthBar{
+                position:absolute; 
+                background-color: white; 
+                opacity:1; 
+                width:250px;
+                height: 70px;
+                z-index: 1;
+                border-style:outset;
+                border-width: thick;
+                padding-left:10px;
+                padding-right: 12px;
+                padding-top:5px;
+            }
+            #max{
+                height: 5px;
+                background-color: grey;
+                margin-top:5px
+            }
+            #HP{
+                height: 5px;
+                background-color: red;
+                position:absolute;
+                top:0;
+                left:0;
+                right:0;
+                width:50%;
+            }
+            #XP{
+                height: 5px;
+                background-color: green;
+                position:absolute;
+                top:0;
+                left:0;
+                right:0;
+                width:50%;
+            }
+            .item{
+                border-style:outset;
+                border-width: medium;
+                display: inline-block;
+                padding-left: 2.5px;
+                width: 15%;
+                height: 32px;
+                border-color: black;
+            }
+            #items{
+                padding-top:10px;
+                position: relative;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <div style="display:inline-block; position:relative;">
+            
+            <div id="healthBar">
+                <div id="HPandXP">
+                    <div style="position:relative">
+                        <div id="max"></div>
+                        <div id="HP"></div>
+                    </div>
+                    <div style="position:relative">
+                        <div id="max"></div>
+                        <div id="XP"></div>
+                    </div>
+                </div>
+                <div id="items">
+                    <div class="item" id="one">1</div>
+                    <div class="item" id="two">2</div>
+                    <div class="item" id="three">3</div>
+                    <div class="item" id="four">4</div>
+                    <div class="item" id="five">5</div>
+                </div>
+            </div>
+            <canvas id='game'></canvas>
+            <div id="overlappingDiv"></div>
+        </div>
+        
+        <script type="text/javascript" src="data/LEVEL1/collision1.js"></script>
+        <script type="text/javascript" src="data/LEVEL1/spawnArea1.js"></script>
+        <script type="text/javascript" src="data/LEVEL1/startCollision.js"></script>
+        <script type="text/javascript" src="data/LEVEL2/collision2.js"></script>
+        <script type="text/javascript" src="data/LEVEL3/collision3.js"></script>
+        <script type="text/javascript" src="data/LEVEL4/collision4.js"></script>
+        <script type="text/javascript" src="data/LEVEL5/collision5.js"></script>
+        <script type="text/javascript" src="keyListen.js"></script>
+        <script type="text/javascript" src="mech.js"></script>
+        <script type="text/javascript" src="classes.js"></script>
+        <script type="text/javascript" src="level_1.js"></script>
+        <script type="text/javascript" src="level_2.js"></script>
+        <script type="text/javascript" src="level_3.js"></script>
+        <script type="text/javascript" src="level_4.js"></script>
+        <script type="text/javascript" src="level_5.js"></script>
+        <script type="text/javascript" src="app.js"></script>
+        
+
+        <script>
+            
+            window.addEventListener("DOMContentLoaded", initGame()) 
+
+            
+
+        </script>
+    </body>
+</html>
